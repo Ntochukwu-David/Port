@@ -11,9 +11,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
         body{background-image:url(./Designs/image-jpeg.jpeg);background-repeat:no-repeat;background-size: cover;background-position: center;background-color:black;}
-        main{height:800px;width:1420px;}
-        .nav-bar{height:40px;width:100%;margin:auto;display: flex;justify-content: space-between;}
-        button{cursor:pointer;width:200px;height:40px;font-family: 'Times New Roman', Times, serif;font-size:20px;margin-left:200px;border-radius:20px;}
+        main{height:800px;width:100%;}
+        .nav-bar{width:100%;margin:auto;display: flex;justify-content: space-between;align-items: center;}
+        .nav-bar ul li{list-style: none;display: inline-block;margin:0px 80px;position:relative;}
+        .nav-bar ul li::after{content:'';height:3px;width:0;background:#2a6da8;position:absolute;left:0px;bottom:-10px;transition:0.5s;}
+        .nav-bar ul li:hover::after{width:100%;}
+        button{cursor:pointer;width:200px;height:40px;font-size:20px;margin-left:200px;border-radius:20px;padding:10px;text-align:center;font-weight:bold;}
         button:hover{background-color:black;color:#2a6da8}
         a{text-decoration:none;color:white}
         a:hover{color:#2a6da8;}
@@ -26,19 +29,13 @@
     <body>
         <main>
             <div class="nav-bar">
-                <div>
-                    <a href="#"><p>Intro</p></a>
-                </div>
-                <div>
-                    <a href="#"><p>About me</p></a>
-                </div>
-                <div>
-                    <a href="#"><p>Recent work</p></a>
-                </div>
-                <div>
-                    <a href="#"><p>Get in touch</p></a>
-                </div>
-                <div style="display: flex;gap:10px;">
+                <ul>
+                    <li><a href="#">Intro</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Recent work</a></li>
+                    <li><a href="#">Get in touch</a></li>
+                </ul>
+                <div style="display: flex;gap:10px;justify-content:end;">
                     <a href="https://www.facebook.com/david.kvng.372" target="_blank">
                         <img src="./Designs/icons8-facebook.svg" alt="facebook" style="height:25px;width:25px;background-color:white;margin-top:10px;">
                     </a>
@@ -49,6 +46,7 @@
                         <img src="./Designs/icons8-x-50.png" alt="X" style="height:25px;width:25px;background-color:white;margin-top:10px;">
                     </a>
                 </div>
+                
             </div>
             <div style="height:500px;display: flex;">
                 <div style="height:400px;width:50%;">
